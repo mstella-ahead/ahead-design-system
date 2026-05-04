@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AHEAD — Article components</title>
+<link rel="stylesheet" href="../tokens/tokens.css" />
+</head>
+<body>
+
+<!-- Pattern G: Tall dark article hero -->
+<section class="article-hero">
+  <div class="article-hero__overlay"></div>
+  <div class="container article-hero__content">
+    <h5>Article</h5>
+    <h1>The Anatomy of <i>Operational</i> Excellence</h1>
+    <div class="byline">
+      <div style="width:6rem;height:6rem;border-radius:50%;background:#67c3e9;"></div>
+      <div>
+        <p class="byline__name">Tim Frank</p>
+        <p class="byline__role">Chief Client Officer, AHEAD</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pattern H: Two-column article body -->
+<section class="section">
+  <div class="container">
+    <div class="tags" style="margin-bottom: 3rem;">
+      <ul>
+        <li class="tag">Operations</li>
+        <li class="tag">AI</li>
+        <li class="tag">Strategy</li>
+      </ul>
+    </div>
+
+    <article class="rte" style="max-width: 100rem; margin: 0 auto;">
+      <h2>Executive Summary</h2>
+      <p>Enterprise operations have evolved from a back-office function into a living system that mirrors the structure of biological organisms — sensing, responding, deciding, learning. Modern operations leaders must therefore think less like factory managers and more like systems biologists: every input, signal, and feedback loop matters.</p>
+      <p>This article walks through five anatomical lenses for understanding operational excellence: the nervous system (real-time awareness), the immune system (precision response), the prefrontal cortex (decision making), the skeleton and musculature (architecture and execution), and reflexes and learning (the path to autonomous operations).</p>
+
+      <h2>The Nervous System: Real-Time Awareness</h2>
+      <p>Just as the human nervous system continuously transmits signals between the body and brain, modern enterprises rely on a dense observability layer to translate raw events into actionable awareness. Without it, leadership operates blind — reacting to incidents long after they've cascaded across systems.</p>
+      <ul>
+        <li>Distributed tracing across services</li>
+        <li>Synthetic and real-user monitoring</li>
+        <li>Event correlation at machine speed</li>
+      </ul>
+
+      <h2>Final Thoughts</h2>
+      <p>The companies that excel operationally are not the ones with the most tools — they are the ones whose tools work as a coherent organism. Coherence, not capability, is the differentiator.</p>
+    </article>
+  </div>
+</section>
+
+<!-- Pattern I: Decorated pull-quote -->
+<section class="section section--tinted">
+  <div class="container" style="max-width: 80rem;">
+    <blockquote>
+      <p>The companies that excel operationally are not the ones with the most tools — they are the ones whose tools work as a coherent organism.</p>
+      <cite>From "The Anatomy of Operational Excellence"</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- Pattern L: Related cases / extra reading -->
+<section class="section">
+  <div class="container">
+    <h3>More from <i>Thought Leadership</i></h3>
+    <div style="display: grid; gap: 2rem; grid-template-columns: 1fr; margin-top: 4rem;">
+      <a class="case-study-single" href="#">
+        <div style="aspect-ratio: 16/9; background: var(--ahead-canvas);"></div>
+        <h4 style="margin-top: 2rem;">Navigating Supply Chain Volatility Together</h4>
+        <p style="color: var(--text-muted); margin-top: 0.8rem;">By Tim Frank · March 2026</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

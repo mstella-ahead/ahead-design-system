@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AHEAD — Cards & Stats</title>
+<link rel="stylesheet" href="../tokens/tokens.css" />
+<style>
+  body { padding: 4rem; }
+  .grid { display: grid; gap: 2rem; grid-template-columns: 1fr; }
+  @media (min-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+</style>
+</head>
+<body>
+  <h2>Cards</h2>
+  <div class="grid" style="margin-top: 3rem;">
+    <div class="card">
+      <h4>Light card</h4>
+      <p style="color: var(--text-muted); margin-top: 1.2rem;">Default content surface. Soft shadow, medium radius, generous padding.</p>
+      <a class="button button--link" href="#" style="margin-top: 1.6rem;">Read more</a>
+    </div>
+    <div class="card card--dark">
+      <h4>Dark card</h4>
+      <p style="color: rgba(255,255,255,.7); margin-top: 1.2rem;">For contrast against tinted sections. No shadow — color does the lifting.</p>
+    </div>
+    <div class="card">
+      <h4>With a stat</h4>
+      <div class="stat" style="margin-top: 1.6rem;">
+        <div class="stat__num">450<sup>+</sup></div>
+        <div class="stat__label">Certifications</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="margin-top: 6rem;">Stat block (Pattern C)</h2>
+  <div class="grid" style="margin-top: 3rem;">
+    <div class="stat"><div class="stat__num">85<sup>%</sup></div><div class="stat__label">of enterprises are mid-transformation.</div></div>
+    <div class="stat"><div class="stat__num">63<sup>%</sup></div><div class="stat__label">say their transformation is behind schedule.</div></div>
+    <div class="stat"><div class="stat__num">71<sup>%</sup></div><div class="stat__label">report legacy complexity as the main blocker.</div></div>
+  </div>
+</body>
+</html>

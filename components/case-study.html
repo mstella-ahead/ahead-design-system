@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AHEAD — Case Study Components</title>
+<link rel="stylesheet" href="../tokens/tokens.css" />
+<style>
+  .page-case-study { background: var(--surface-light); }
+  .case-layout { display: grid; grid-template-columns: 6rem 1fr; gap: 4rem; }
+  @media (max-width: 767px) { .case-layout { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="page-case-study">
+
+<!-- Hero (reuse Pattern G) -->
+<section class="article-hero">
+  <div class="article-hero__overlay"></div>
+  <div class="container article-hero__content">
+    <h5>Case Study</h5>
+    <h1>Reducing latency for a <i>global</i> retailer</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="case-layout">
+
+      <!-- Pattern K: Sticky share sidebar -->
+      <aside class="share">
+        <ul>
+          <li><a href="#">in</a></li>
+          <li><a href="#">𝕏</a></li>
+          <li><a href="#">@</a></li>
+        </ul>
+      </aside>
+
+      <div>
+        <!-- Pattern A: eyebrow + display + body -->
+        <span class="eyebrow">Overview</span>
+        <h2>How we cut p99 latency by <i>72%</i> across 14 markets</h2>
+        <p style="font-size: var(--t-md); color: var(--text-muted); margin-top: 1.6rem; max-width: 70ch;">
+          A multi-region migration from monolithic infra to an edge-cached, Kubernetes-native delivery platform — designed, integrated, and shipped in eight months.
+        </p>
+
+        <!-- Pattern J: Listicle with image -->
+        <div class="listicle-image">
+          <div class="listicle-image__media">
+            <div style="aspect-ratio: 4/3; background: var(--ahead-canvas);"></div>
+          </div>
+          <div class="listicle-image__content">
+            <span class="eyebrow">Step 01</span>
+            <h3>Discovery and assessment</h3>
+            <p style="margin-top: 1.2rem;">A two-week deep-dive across application, infra, and observability layers established the baseline and surfaced the real bottlenecks — most of which weren't where the team initially suspected.</p>
+          </div>
+        </div>
+
+        <div class="listicle-image listicle-image--reverse">
+          <div class="listicle-image__media">
+            <div style="aspect-ratio: 4/3; background: var(--ahead-mid-navy);"></div>
+          </div>
+          <div class="listicle-image__content">
+            <span class="eyebrow">Step 02</span>
+            <h3>Edge-first architecture</h3>
+            <p style="margin-top: 1.2rem;">We rebuilt the delivery layer around CDN-resident compute, with origin services treated as a fallback rather than the default path.</p>
+          </div>
+        </div>
+
+        <!-- Pattern I: testimonial pull-quote -->
+        <blockquote>
+          <p>The team didn't just deliver — they re-shaped how we think about latency as a discipline, not an outcome.</p>
+          <cite>VP of Platform Engineering, Global Retailer</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pattern L: Related cases -->
+<section class="section extra-cases">
+  <div class="container">
+    <h3>More <i>client stories</i></h3>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:4rem;">
+      <a class="case-study-single" href="#">
+        <div style="aspect-ratio: 4/3; background: var(--ahead-navy);"></div>
+        <h4>Modernizing core banking infrastructure</h4>
+      </a>
+      <a class="case-study-single" href="#">
+        <div style="aspect-ratio: 4/3; background: var(--ahead-mid-navy);"></div>
+        <h4>Healthcare data platform consolidation</h4>
+      </a>
+      <a class="case-study-single" href="#">
+        <div style="aspect-ratio: 4/3; background: var(--ahead-cyan);"></div>
+        <h4>Manufacturing edge AI rollout</h4>
+      </a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

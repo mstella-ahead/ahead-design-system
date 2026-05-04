@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AHEAD Design System — Primitives Demo</title>
+  <link rel="stylesheet" href="../tokens/tokens.css" />
+  <style>
+    /* Demo-only chrome (not part of the system) */
+    .demo-grid { display: grid; gap: 4rem; padding: 6rem 0; }
+    .demo-row { display: flex; flex-wrap: wrap; gap: 1.6rem; align-items: center; }
+    .demo-label {
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border-quiet);
+      margin-bottom: 1.6rem;
+    }
+    .swatch {
+      display: flex; flex-direction: column; gap: 0.4rem;
+      width: 14rem;
+    }
+    .swatch__chip {
+      height: 8rem;
+      border-radius: var(--r-md);
+      border: 1px solid var(--border-quiet);
+    }
+    .swatch__name { font-size: 1.2rem; font-weight: 500; }
+    .swatch__hex { font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-muted); }
+    .scale-row { display: flex; align-items: baseline; gap: 2rem; padding: 0.8rem 0; border-bottom: 1px dashed var(--border-quiet); }
+    .scale-row__label { font-family: var(--font-mono); font-size: 1.2rem; color: var(--text-muted); width: 8rem; }
+    .grid-3 { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    @media (min-width: 768px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+  </style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<section class="section section--dark">
+  <div class="container">
+    <h5 style="color: var(--ahead-cyan); margin-bottom: 2rem;">DESIGN SYSTEM · v0.1</h5>
+    <h1>
+      A reverse-engineered system for <i>rapid</i> prototypes
+      <span style="color: var(--ahead-cyan);">— extracted from ahead.com, ready to template</span>
+    </h1>
+    <p style="font-size: var(--t-md); margin-top: 2.4rem; max-width: 70ch; color: rgba(255,255,255,.8);">
+      Every primitive on this page comes from the production stylesheet. Use the highlighter on any
+      <a class="link" href="#">link like this one</a> to see the signature interaction.
+    </p>
+    <div class="demo-row" style="margin-top: 3.2rem;">
+      <a class="button button--blue-fill" href="#">Talk to an Expert</a>
+      <a class="button button--white-outline" href="#">See the Tokens</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COLORS ========== -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">01 · Color tokens</span>
+    <h2>The palette is <i>narrow</i> — cyan and blurple do the heavy lifting</h2>
+    <p style="font-size: var(--t-md); color: var(--text-muted); max-width: 60ch; margin-top: 1.6rem;">
+      Cyan dominates on dark surfaces, blurple on light. They never share fills in the same composition.
+    </p>
+
+    <div class="demo-label" style="margin-top: 4rem;">Brand</div>
+    <div class="demo-row">
+      <div class="swatch"><div class="swatch__chip" style="background:#009fdc;"></div><div class="swatch__name">AHEAD Cyan</div><div class="swatch__hex">#009fdc</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#1c4cbf;"></div><div class="swatch__name">Blurple</div><div class="swatch__hex">#1c4cbf</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#123a61;"></div><div class="swatch__name">Navy</div><div class="swatch__hex">#123a61</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#102033;"></div><div class="swatch__name">Canvas</div><div class="swatch__hex">#102033</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#181c24;"></div><div class="swatch__name">Near Black</div><div class="swatch__hex">#181c24</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#253857;"></div><div class="swatch__name">Mid Navy</div><div class="swatch__hex">#253857</div></div>
+    </div>
+
+    <div class="demo-label" style="margin-top: 3.2rem;">Surfaces & Text</div>
+    <div class="demo-row">
+      <div class="swatch"><div class="swatch__chip" style="background:#ebf0f2;"></div><div class="swatch__name">Surface Light</div><div class="swatch__hex">#ebf0f2</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#fff;"></div><div class="swatch__name">Surface White</div><div class="swatch__hex">#ffffff</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#6b7280;"></div><div class="swatch__name">Text Muted</div><div class="swatch__hex">#6b7280</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#c9c9c9;"></div><div class="swatch__name">Border Quiet</div><div class="swatch__hex">#c9c9c9</div></div>
+    </div>
+
+    <div class="demo-label" style="margin-top: 3.2rem;">Accent / State</div>
+    <div class="demo-row">
+      <div class="swatch"><div class="swatch__chip" style="background:#67c3e9;"></div><div class="swatch__name">Cyan Light</div><div class="swatch__hex">#67c3e9</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#00b388;"></div><div class="swatch__name">Green</div><div class="swatch__hex">#00b388</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#6eceb2;"></div><div class="swatch__name">Mint</div><div class="swatch__hex">#6eceb2</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#f87171;"></div><div class="swatch__name">Error</div><div class="swatch__hex">#f87171</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TYPOGRAPHY ========== -->
+<section class="section section--tinted">
+  <div class="container">
+    <span class="eyebrow">02 · Typography</span>
+    <h2>One sans, one italic serif, one mono</h2>
+
+    <div class="demo-label" style="margin-top: 4rem;">Heading roles</div>
+    <div class="scale-row"><span class="scale-row__label">h1</span><h1 style="font-size: var(--t-3xl);">The hero <i>headline</i></h1></div>
+    <div class="scale-row"><span class="scale-row__label">h2</span><h2>A section <i>display</i> heading</h2></div>
+    <div class="scale-row"><span class="scale-row__label">h3</span><h3>A subheading with <strong>strong</strong> emphasis</h3></div>
+    <div class="scale-row"><span class="scale-row__label">h4</span><h4>A card or group <i>title</i></h4></div>
+    <div class="scale-row"><span class="scale-row__label">h5</span><h5>Eyebrow tier 2</h5></div>
+    <div class="scale-row"><span class="scale-row__label">h6</span><h6>Callout text</h6></div>
+
+    <div class="demo-label" style="margin-top: 4rem;">The italic-serif rule (signature)</div>
+    <h3 style="max-width: 70ch;">
+      Any <em>emphasized</em> word inside a heading switches to PT Serif italic. The size bumps to 1.09em so the serif feels visually <i>balanced</i> against the surrounding sans.
+    </h3>
+  </div>
+</section>
+
+<!-- ========== BUTTONS ========== -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">03 · Buttons</span>
+    <h2>Pill geometry, <i>16 variants</i>, three semantic groups</h2>
+
+    <div class="demo-label" style="margin-top: 4rem;">On light surface</div>
+    <div class="demo-row">
+      <a class="button button--blurple-fill" href="#">Blurple Fill</a>
+      <a class="button button--blue-fill" href="#">Cyan Fill</a>
+      <a class="button button--blue-outline" href="#">Cyan Outline</a>
+      <a class="button button--link" href="#">Link Button</a>
+    </div>
+
+    <div class="demo-row" style="margin-top: 2rem;">
+      <a class="button button--mini button--blurple-fill" href="#">Mini Fill</a>
+      <a class="button button--mini button--blue-outline" href="#">Mini Outline</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="demo-label" style="color: rgba(255,255,255,.6); border-color: rgba(255,255,255,.2);">On dark surface</div>
+    <div class="demo-row">
+      <a class="button button--white-fill" href="#">White Fill</a>
+      <a class="button button--white-outline" href="#">White Outline</a>
+      <a class="button button--blue-fill" href="#">Cyan Fill</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STATS ========== -->
+<section class="section section--tinted">
+  <div class="container">
+    <span class="eyebrow">04 · Stat block</span>
+    <h2>Numbers carry the <i>weight</i>, not bold</h2>
+    <div class="grid-3" style="margin-top: 4rem;">
+      <div class="stat"><div class="stat__num">85<sup>%</sup></div><div class="stat__label">of enterprises are currently in the midst of a digital transformation.</div></div>
+      <div class="stat"><div class="stat__num">63<sup>%</sup></div><div class="stat__label">say their transformation is behind schedule — or altogether stuck.</div></div>
+      <div class="stat"><div class="stat__num">71<sup>%</sup></div><div class="stat__label">report legacy system complexity as their main roadblock.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COUNTER LIST ========== -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">05 · Numbered anchors</span>
+    <h2>The <i>01 / 02 / 03</i> pattern</h2>
+    <ol class="counter-list stack" style="margin-top: 4rem; max-width: 80ch;">
+      <li><h4>Education & Enablement</h4><p style="color: var(--text-muted);">We are educators first.</p></li>
+      <li><h4>Strategy & Roadmap</h4><p style="color: var(--text-muted);">End-to-end technology strategies.</p></li>
+      <li><h4>Design & Plan</h4><p style="color: var(--text-muted);">Architect digital delivery platforms.</p></li>
+      <li><h4>Deployment & Management</h4><p style="color: var(--text-muted);">Implemented correctly the first time.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========== CARDS ========== -->
+<section class="section section--tinted">
+  <div class="container">
+    <span class="eyebrow">06 · Cards</span>
+    <h2>Soft shadow, <i>medium</i> radius, generous padding</h2>
+    <div class="grid-3" style="margin-top: 4rem;">
+      <div class="card"><h4>Light card</h4><p style="color: var(--text-muted); margin-top: 1.2rem;">Default surface for content blocks. Soft shadow keeps it grounded without competing with section dividers.</p><a class="button button--link" href="#" style="margin-top: 1.6rem;">Read more</a></div>
+      <div class="card card--dark"><h4>Dark card</h4><p style="color: rgba(255,255,255,.7); margin-top: 1.2rem;">For contrast against tinted sections. No shadow — the color does the lifting.</p><a class="button button--link" href="#" style="color: var(--ahead-cyan); box-shadow: var(--hl-cyan-rest); margin-top: 1.6rem;">Read more</a></div>
+      <div class="card"><h4>With a stat</h4><div class="stat" style="margin-top: 1.6rem;"><div class="stat__num" style="font-size: var(--t-3xl);">450<sup>+</sup></div><div class="stat__label">Certifications</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER NOTE ========== -->
+<section class="section section--dark">
+  <div class="container">
+    <h5 style="color: var(--ahead-cyan); margin-bottom: 2rem;">END</h5>
+    <h3 style="max-width: 70ch;">
+      That's the system. Save <code style="font-family: var(--font-mono); color: var(--ahead-cyan);">tokens.css</code> and the spec markdown alongside any prototype, and Claude can <i>build to brand</i> without re-deriving the rules.
+    </h3>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "ahead-design-system",
+  "version": "0.1.0",
+  "description": "Reverse-engineered design system extracted from www.ahead.com. Tokens, components, and patterns for prototyping with Claude Design.",
+  "main": "tokens/tailwind.config.js",
+  "files": [
+    "CLAUDE.md",
+    "README.md",
+    "docs/",
+    "tokens/",
+    "components/",
+    "examples/",
+    "assets/"
+  ],
+  "keywords": [
+    "design-system",
+    "tailwindcss",
+    "tokens",
+    "claude-design"
+  ],
+  "license": "UNLICENSED",
+  "private": true
+}

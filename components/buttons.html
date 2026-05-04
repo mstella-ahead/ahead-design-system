@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AHEAD — Buttons</title>
+<link rel="stylesheet" href="../tokens/tokens.css" />
+<style>
+  body { padding: 4rem; }
+  .row { display: flex; gap: 1.6rem; flex-wrap: wrap; align-items: center; margin-bottom: 3rem; }
+  .label { font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 1rem; }
+</style>
+</head>
+<body>
+  <h2>Buttons — light surface</h2>
+  <div class="label">Fills</div>
+  <div class="row">
+    <a class="button button--blurple-fill" href="#">Blurple Fill</a>
+    <a class="button button--blue-fill" href="#">Cyan Fill</a>
+  </div>
+  <div class="label">Outlines</div>
+  <div class="row">
+    <a class="button button--blue-outline" href="#">Cyan Outline</a>
+  </div>
+  <div class="label">Mini variants</div>
+  <div class="row">
+    <a class="button button--mini button--blurple-fill" href="#">Mini Blurple</a>
+    <a class="button button--mini button--blue-outline" href="#">Mini Outline</a>
+  </div>
+  <div class="label">Link button (highlighter)</div>
+  <div class="row">
+    <a class="button button--link" href="#">Read More</a>
+  </div>
+
+  <section class="section section--dark" style="padding: 4rem; margin-top: 4rem;">
+    <h2 style="color:#fff">Buttons — dark surface</h2>
+    <div class="row" style="margin-top: 2rem;">
+      <a class="button button--white-fill" href="#">White Fill</a>
+      <a class="button button--white-outline" href="#">White Outline</a>
+      <a class="button button--blue-fill" href="#">Cyan Fill</a>
+    </div>
+  </section>
+</body>
+</html>
